@@ -17,6 +17,30 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
+# ─────────────────────────────────────────────────────────
+# IMPORTS — what each library does and why it is here
+#
+# Standard library (built into Python, no installation needed):
+#   os          — reads API keys from environment variables via os.getenv()
+#   json        — reads and writes session files in JSON format
+#   uuid        — generates unique IDs for each saved session
+#   datetime    — creates timestamps for session files and filenames
+#   pathlib     — handles file paths cleanly across all operating systems
+#
+# FastAPI (installed via pip):
+#   FastAPI         — the web framework that powers all API endpoints
+#   HTTPException   — returns error responses with HTTP status codes
+#   CORSMiddleware  — allows the React frontend (port 5173) to talk to
+#                     this backend (port 8000) without browser security errors
+#
+# Pydantic (installed via pip, comes with FastAPI):
+#   BaseModel   — defines the expected shape of incoming request bodies
+#                 FastAPI uses this to validate requests automatically
+#
+# python-dotenv (installed via pip):
+#   load_dotenv — reads the .env file and loads API keys into the
+#                 environment so os.getenv() can access them
+# ─────────────────────────────────────────────────────────
 
 load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 
