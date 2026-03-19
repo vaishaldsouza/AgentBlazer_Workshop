@@ -1,23 +1,40 @@
-# Environment
-.env
+# ── Secrets ──────────────────────────────────────────────
+backend/.env
 
-# Python
+# ── Python ───────────────────────────────────────────────
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pyo
 .Python
+*.egg-info/
+dist/
+build/
+*.egg
 
-# Virtual environments
+# ── Virtual environments ──────────────────────────────────
 venv/
 .venv/
 env/
+ENV/
 
-# Session data
-data/sessions/
+# ── Session data (user-generated, not source code) ────────
+data/sessions/*.json
 
-# IDE
+# ── Frontend build output ─────────────────────────────────
+frontend/dist/
+frontend/node_modules/
+
+# ── IDE & OS ──────────────────────────────────────────────
 .vscode/
 .idea/
-# Node
-node_modules/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── Logs & temp ───────────────────────────────────────────
+*.log
+*.tmp
+.cache/
